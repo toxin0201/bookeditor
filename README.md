@@ -6,5 +6,5 @@ bookeditor
 * framework : express
 * database : mysql
 * inmemory database : redis
-* docker - redis, mysql
- 
+* docker : redis, mysql
+* CD(Continuous Deployment) : github - webhook - BUDDY
