@@ -10,4 +10,12 @@ const sequelize = new Sequelize(config.database, config.username, config.passwor
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
 
+// model 연결
+db.User = require('./user')(sequelize, Sequelize);
+db.Comment = require('./comment')(sequelize, Sequelize);
+
+// 관계 정의
+db.User.hasMany(db.Comment, { foreignKey: 'commenter', sourceKey: 'id' });
+db.Comment.belongsTo(db.User, { foreignKey: 'commenter', targetKey: 'id' });
+
 module.exports = db;
