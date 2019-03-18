@@ -1,29 +1,333 @@
 doctype html
-html(lang="ko")
-  head
-    meta(charset="utf-8")
-    meta(http-equiv="Content-Type" content="text/html; charset=UTF-8")
-    meta(http-equiv="X-UA-Compatible" content="IE=edge,chrome=1")
-    title BookEditor - All That Developer
-    meta(name="viewport" content="width=device-width, initial-scale=1.0")
-    link(rel="stylesheet" type="text/css" href="/css/main.css")
-    link(href="https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700,800&amp;subset=korean" rel="stylesheet") //구글폰트
-    link(href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet") //구글아이콘 
-  body
-    div.wrap
-	//div class="ad_top"><a href="#"><img src="/img/ad_top.png" alt="" /></a></div>
-    div.header
-      div.snb_top
-        ul.login_area
+head
+  meta(charset='utf-8')
+  meta(http-equiv='Content-Type', content='text/html; charset=UTF-8')
+  meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+  title BookEditor - All That Developer
+  meta(name='viewport', content='width=device-width, initial-scale=1.0')
+  link(rel='stylesheet', type='text/css', href='css/main.css')
+  link(href='https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700,800&subset=korean', rel='stylesheet')
+  // 구글폰트
+  link(href='https://fonts.googleapis.com/icon?family=Material+Icons', rel='stylesheet')
+  // 구글아이콘
+.wrap
+  .header
+    .snb_top
+      ul.login_area
+        li
+          a(href='#')
+            i.material-icons people
+            |  &#xB85C;&#xADF8;&#xC778;
+        li
+          a(href='#')
+            i.material-icons person_add
+            |  &#xD68C;&#xC6D0;&#xAC00;&#xC785;
+      h1.site_logo
+        a(href='main.html')
+          img(src='', alt='BookEditor')
+    // 메인메뉴영역
+    .snb_menu
+      ul
+        li.on
+          a(href='#') &#xAD6C;&#xC778;&#xAD6C;&#xC9C1;
+        // [D] : 해당메뉴 선택시 .on 추가
+        li
+          a(href='#') &#xCEE4;&#xBBA4;&#xB2C8;&#xD2F0;
+        li
+          a(href='#') &#xCD9C;&#xD310;&#xC815;&#xBCF4;
+        li
+          a(href='#') &#xAD00;&#xB9AC;&#xC790; &#xBB38;&#xC758;
+    // 구글검색영역
+    .google_search
+      .form
+        input(name='', type='text', placeholder='Google 검색')
+        button.btn_search(type='submit')
+          i &#xAC80;&#xC0C9;
+  .contents
+    .section
+      // 구인구직 최신글
+      .ul_box.jobs
+        h3 &#xAD6C;&#xC778;&#xAD6C;&#xC9C1; &#xCD5C;&#xC2E0;&#xAE00;
+        ul.ul_present
+          // [D] : 보여지는 리스트 li는 총 max 10개.
           li
-            a(href="#")
-              i.material-icons people 
-              로그인
+            p.jobs_tit
+              a(href='#')
+                | &#xC545;&#xB355;&#xC8FC;&#xC545;&#xB355;&#xC8FC;&#xC545;&#xB355;&#xC8FC;&#xC545;&#xB355;&#xC8FC;&#xC545;&#xB355;&#xC8FC;&#xC545;&#xB355;&#xC8FC;&#xC545;&#xB355;&#xC8FC;&#xC545;&#xB355;&#xC8FC;&#xC545;&#xB355;&#xC8FC;&#xC545;&#xB355;&#xC8FC;&#xC545;&#xB355;&#xC8FC;&#xC545;&#xB355;&#xC8FC;&#xC545;&#xB355;&#xC8FC;&#xC545;&#xB355;&#xC8FC;&#xC545;&#xB355;&#xC8FC;&#xC545;&#xB355;&#xC8FC;&#xC545;&#xB355;&#xC8FC;&#xC545;&#xB355;&#xC8FC;&#xC545;&#xB355;&#xC8FC;&#xC545;&#xB355;&#xC8FC;&#xC545;&#xB355;&#xC8FC;&#xC545;&#xB355;&#xC8FC;&#xC545;&#xB355;&#xC8FC;&#xC545;&#xB355;&#xC8FC;&#xC545;&#xB355;&#xC8FC;&#xC545;&#xB355;&#xC8FC;&#xC545;&#xB355;&#xC8FC;&#xC545;&#xB355;&#xC8FC;&#xC545;&#xB355;&#xC8FC;&#xC545;&#xB355;&#xC8FC; - &#xD14D;&#xC2A4;&#xD2B8;&#xAE38;&#xC5B4;&#xC9C8;&#xB54C;? - &#xBB38;&#xC790; &#xC218; &#xC81C;&#xD55C; &#xD544;&#xC694;
+            span.director
+              a(href='#') &#xBC15;&#xC18C;&#xC601;
+              i.material-icons thumb_up_alt
+              i.counting 45
+              span.how_days 15&#xC77C; &#xC804;
           li
-            a(href="#")
-              i.material-icons" person_add 
-              회원가입
-        h1.site_logo
-          a(href="main.html")
-            img(src="" alt="BookEditor")
-		
+            p.jobs_tit
+              a(href='#') &#xD14C;&#xC2A4;&#xD2B8;111
+            span.director
+              a(href='#') &#xBC15;&#xC18C;&#xC601;
+              i.material-icons thumb_up_alt
+              i.counting 45
+              span.how_days 15&#xC77C; &#xC804;
+          li
+            p.jobs_tit
+              a(href='#') &#xD14C;&#xC2A4;&#xD2B8;111
+            span.director
+              a(href='#') &#xBC15;&#xC18C;&#xC601;
+              i.material-icons thumb_up_alt
+              i.counting 45
+              span.how_days 15&#xC77C; &#xC804;
+          li
+            p.jobs_tit
+              a(href='#') &#xD14C;&#xC2A4;&#xD2B8;111
+            span.director
+              a(href='#') &#xBC15;&#xC18C;&#xC601;
+              i.material-icons thumb_up_alt
+              i.counting 45
+              span.how_days 15&#xC77C; &#xC804;
+          li
+            p.jobs_tit
+              a(href='#') &#xD14C;&#xC2A4;&#xD2B8;111
+            span.director
+              a(href='#') &#xBC15;&#xC18C;&#xC601;
+              i.material-icons thumb_up_alt
+              i.counting 45
+              span.how_days 15&#xC77C; &#xC804;
+          li
+            p.jobs_tit
+              a(href='#') &#xD14C;&#xC2A4;&#xD2B8;111
+            span.director
+              a(href='#') &#xBC15;&#xC18C;&#xC601;
+              i.material-icons thumb_up_alt
+              i.counting 45
+              span.how_days 15&#xC77C; &#xC804;
+          li
+            p.jobs_tit
+              a(href='#') &#xD14C;&#xC2A4;&#xD2B8;111
+            span.director
+              a(href='#') &#xBC15;&#xC18C;&#xC601;
+              i.material-icons thumb_up_alt
+              i.counting 45
+              span.how_days 15&#xC77C; &#xC804;
+          li
+            p.jobs_tit
+              a(href='#') &#xD14C;&#xC2A4;&#xD2B8;111
+            span.director
+              a(href='#') &#xBC15;&#xC18C;&#xC601;
+              i.material-icons thumb_up_alt
+              i.counting 45
+              span.how_days 15&#xC77C; &#xC804;
+          li
+            p.jobs_tit
+              a(href='#') &#xD14C;&#xC2A4;&#xD2B8;111
+            span.director
+              a(href='#') &#xBC15;&#xC18C;&#xC601;
+              i.material-icons thumb_up_alt
+              i.counting 45
+              span.how_days 15&#xC77C; &#xC804;
+          li
+            p.jobs_tit
+              a(href='#') &#xD14C;&#xC2A4;&#xD2B8;111
+            span.director
+              a(href='#') &#xBC15;&#xC18C;&#xC601;
+              i.material-icons thumb_up_alt
+              i.counting 45
+              span.how_days 15&#xC77C; &#xC804;
+        span.more_view
+          a(href='#') &#xB354;&#xBCF4;&#xAE30; &gt;
+        // [D] : 누르면 상세화면으로 이동
+      // 출판정보 최신글
+      .ul_box.publish
+        h3 &#xCD9C;&#xD310;&#xC815;&#xBCF4; &#xCD5C;&#xC2E0;&#xAE00;
+        ul.ul_present
+          li
+            p.jobs_tit
+              a(href='#') &#xD14C;&#xC2A4;&#xD2B8;111
+            span.director
+              a(href='#') &#xBC15;&#xC18C;&#xC601;
+              i.material-icons thumb_up_alt
+              i.counting 45
+              span.how_days 15&#xC77C; &#xC804;
+          li
+            p.jobs_tit
+              a(href='#') &#xD14C;&#xC2A4;&#xD2B8;111
+            span.director
+              a(href='#') &#xBC15;&#xC18C;&#xC601;
+              i.material-icons thumb_up_alt
+              i.counting 45
+              span.how_days 15&#xC77C; &#xC804;
+          li
+            p.jobs_tit
+              a(href='#') &#xD14C;&#xC2A4;&#xD2B8;111
+            span.director
+              a(href='#') &#xBC15;&#xC18C;&#xC601;
+              i.material-icons thumb_up_alt
+              i.counting 45
+              span.how_days 15&#xC77C; &#xC804;
+          li
+            p.jobs_tit
+              a(href='#') &#xD14C;&#xC2A4;&#xD2B8;111
+            span.director
+              a(href='#') &#xBC15;&#xC18C;&#xC601;
+              i.material-icons thumb_up_alt
+              i.counting 45
+              span.how_days 15&#xC77C; &#xC804;
+          li
+            p.jobs_tit
+              a(href='#') &#xD14C;&#xC2A4;&#xD2B8;111
+            span.director
+              a(href='#') &#xBC15;&#xC18C;&#xC601;
+              i.material-icons thumb_up_alt
+              i.counting 45
+              span.how_days 15&#xC77C; &#xC804;
+          li
+            p.jobs_tit
+              a(href='#') &#xD14C;&#xC2A4;&#xD2B8;111
+            span.director
+              a(href='#') &#xBC15;&#xC18C;&#xC601;
+              i.material-icons thumb_up_alt
+              i.counting 45
+              span.how_days 15&#xC77C; &#xC804;
+          li
+            p.jobs_tit
+              a(href='#') &#xD14C;&#xC2A4;&#xD2B8;111
+            span.director
+              a(href='#') &#xBC15;&#xC18C;&#xC601;
+              i.material-icons thumb_up_alt
+              i.counting 45
+              span.how_days 15&#xC77C; &#xC804;
+          li
+            p.jobs_tit
+              a(href='#') &#xD14C;&#xC2A4;&#xD2B8;111
+            span.director
+              a(href='#') &#xBC15;&#xC18C;&#xC601;
+              i.material-icons thumb_up_alt
+              i.counting 45
+              span.how_days 15&#xC77C; &#xC804;
+          li
+            p.jobs_tit
+              a(href='#') &#xD14C;&#xC2A4;&#xD2B8;111
+            span.director
+              a(href='#') &#xBC15;&#xC18C;&#xC601;
+              i.material-icons thumb_up_alt
+              i.counting 45
+              span.how_days 15&#xC77C; &#xC804;
+          li
+            p.jobs_tit
+              a(href='#') &#xD14C;&#xC2A4;&#xD2B8;111
+            span.director
+              a(href='#') &#xBC15;&#xC18C;&#xC601;
+              i.material-icons thumb_up_alt
+              i.counting 45
+              span.how_days 15&#xC77C; &#xC804;
+        span.more_view
+          a(href='#') &#xB354;&#xBCF4;&#xAE30; &gt;
+    .section
+      // 커뮤니티 최신글
+      .ul_box.long.community
+        h3 &#xCEE4;&#xBBA4;&#xB2C8;&#xD2F0; &#xCD5C;&#xC2E0;&#xAE00;
+        ul.ul_present
+          li
+            p.jobs_tit
+              a(href='#') &#xD14C;&#xC2A4;&#xD2B8;111
+            span.director
+              a(href='#') &#xBC15;&#xC18C;&#xC601;
+              i.material-icons thumb_up_alt
+              i.counting 45
+              span.how_days 15&#xC77C; &#xC804;
+          li
+            p.jobs_tit
+              a(href='#') &#xD14C;&#xC2A4;&#xD2B8;111
+            span.director
+              a(href='#') &#xBC15;&#xC18C;&#xC601;
+              i.material-icons thumb_up_alt
+              i.counting 45
+              span.how_days 15&#xC77C; &#xC804;
+          li
+            p.jobs_tit
+              a(href='#') &#xD14C;&#xC2A4;&#xD2B8;111
+            span.director
+              a(href='#') &#xBC15;&#xC18C;&#xC601;
+              i.material-icons thumb_up_alt
+              i.counting 45
+              span.how_days 15&#xC77C; &#xC804;
+          li
+            p.jobs_tit
+              a(href='#') &#xD14C;&#xC2A4;&#xD2B8;111
+            span.director
+              a(href='#') &#xBC15;&#xC18C;&#xC601;
+              i.material-icons thumb_up_alt
+              i.counting 45
+              span.how_days 15&#xC77C; &#xC804;
+          li
+            p.jobs_tit
+              a(href='#') &#xD14C;&#xC2A4;&#xD2B8;111
+            span.director
+              a(href='#') &#xBC15;&#xC18C;&#xC601;
+              i.material-icons thumb_up_alt
+              i.counting 45
+              span.how_days 15&#xC77C; &#xC804;
+          li
+            p.jobs_tit
+              a(href='#') &#xD14C;&#xC2A4;&#xD2B8;111
+            span.director
+              a(href='#') &#xBC15;&#xC18C;&#xC601;
+              i.material-icons thumb_up_alt
+              i.counting 45
+              span.how_days 15&#xC77C; &#xC804;
+          li
+            p.jobs_tit
+              a(href='#') &#xD14C;&#xC2A4;&#xD2B8;111
+            span.director
+              a(href='#') &#xBC15;&#xC18C;&#xC601;
+              i.material-icons thumb_up_alt
+              i.counting 45
+              span.how_days 15&#xC77C; &#xC804;
+          li
+            p.jobs_tit
+              a(href='#') &#xD14C;&#xC2A4;&#xD2B8;111
+            span.director
+              a(href='#') &#xBC15;&#xC18C;&#xC601;
+              i.material-icons thumb_up_alt
+              i.counting 45
+              span.how_days 15&#xC77C; &#xC804;
+          li
+            p.jobs_tit
+              a(href='#') &#xD14C;&#xC2A4;&#xD2B8;111
+            span.director
+              a(href='#') &#xBC15;&#xC18C;&#xC601;
+              i.material-icons thumb_up_alt
+              i.counting 45
+              span.how_days 15&#xC77C; &#xC804;
+          li
+            p.jobs_tit
+              a(href='#') &#xD14C;&#xC2A4;&#xD2B8;111
+            span.director
+              a(href='#') &#xBC15;&#xC18C;&#xC601;
+              i.material-icons thumb_up_alt
+              i.counting 45
+              span.how_days 15&#xC77C; &#xC804;
+        span.more_view
+          a(href='#') &#xB354;&#xBCF4;&#xAE30; &gt;
+      // 광고영역
+      .ad_contents
+        a(href='#')
+          img(src='img/ad_contents.png', alt='')
+      .ad_small01
+        a(href='#')
+          img(src='img/ad_small01.jpg', alt='')
+  // 광고영역
+  .ad_right
+    a(href='#')
+      img(src='img/ad_right.png', alt='')
+  #footer
+    .middle-wrap
+      .txt-box
+        .link
+          ul
+            li.first
+              a(href='#') &#xBD81;&#xC5D0;&#xB514;&#xD130; &#xC18C;&#xAC1C;
+            li
+              a(href='#') &#xAD00;&#xB9AC;&#xC790; &#xBB38;&#xC758;
+            li
+              a(href='#') &#xAD11;&#xACE0; &#xBB38;&#xC758;
+        .address
+          p Copyright &#x24D2; 2019 by bookeditor. All rights reserved.
