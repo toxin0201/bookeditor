@@ -19,7 +19,7 @@ app.set('view engine', 'pug');
 app.use(logger('dev'));
 
 // static file 라우터 - 최상단 위치, 다른 미들웨어 작업 안하도록 함
-app.use('/public', express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser('sbk6648'));
